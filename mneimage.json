@@ -71,6 +71,84 @@
         "pk": null,
         "model": "tardis_portal.parametername",
         "fields": {
+            "name": "numberOfSTI",
+            "data_type": 2,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Number of STI",
+            "units": "",
+            "order": 9999,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+   {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "numberOfEOG",
+            "data_type": 2,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Number of EOG",
+            "units": "",
+            "order": 9999,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+   {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "numberOfEEG",
+            "data_type": 2,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Number of EEG",
+            "units": "",
+            "order": 9999,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+   {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "numberOfMEG",
+            "data_type": 2,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Number of MEG",
+            "units": "",
+            "order": 9999,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+
+
+   {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
             "name": "bads",
             "data_type": 2,
             "is_searchable": false,
