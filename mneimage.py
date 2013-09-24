@@ -8,10 +8,12 @@ import subprocess
 import tempfile
 import base64
 import os
+os.environ['MPLCONFIGDIR'] = tempfile.mkdtemp()
 import numpy as np
 import matplotlib
 #http://matplotlib.org/faq/usage_faq.html#what-is-a-backend
 matplotlib.use('AGG')
+#perhaps need to install ---yum install agg
 
 import mne
 from mne.fiff import Raw
@@ -108,8 +110,43 @@ class MNEImageFilter(object):
             metadata_dump['measure_id'] = raw.info['meas_id']
 
             # get file id logger.error('image_information ' + raw.info['file_id'])
-            metadata_dump['image_information'] = 'Some fixed value'
+            #metadata_dump['image_information'] = 'Some fixed value'
+	        metadata_dump['number_of_channels'] = raw.n_times
 	 
+	        metadata_dump['image_information'] = "".join(raw.ch_names)
+	   
+            #STI
+            numberOfSTI = 0
+            for term in raw.ch_names:
+                if term.startswith('STI'):
+                        numberOfSTI += 1
+
+            metadata_dump['numberOfSTI'] = numberOfSTI
+	
+	        #EOG
+	        numberOfEOG = 0
+	        for term2 in raw.ch_names:
+		     if term2.startswith('EOG'):
+			numberOfEOG += 1
+
+	        metadata_dump['numberOfEOG'] = numberOfEOG
+
+	        #EEG
+            numberOfEEG = 0
+            for term3 in raw.ch_names:
+                if term3.startswith('EEG'):
+                        numberOfEEG += 1
+
+            metadata_dump['numberOfEEG'] = numberOfEEG
+
+ 	        #MEG
+	        numberOfMEG = 0
+            for term4 in raw.ch_names:
+                if term4.startswith('MEG'):
+                        numberOfMEG += 1
+
+            metadata_dump['numberOfMEG'] = numberOfMEG
+
             # get duration
             #metadata_dump['duration'] = raw.duration
 
@@ -121,7 +158,8 @@ class MNEImageFilter(object):
 
             # get channel names (attribute added during export)
             metadata_dump['channel_names'] = raw.ch_names
-            #metadata_dump['channel_names'] = raw_ts.ch_names[:3]
+            #logger.error(raw.ch_names)
+	        #metadata_dump['channel_names'] = raw_ts.ch_names[:3]
 
             # get The width of the transition band of the highpass filter
             metadata_dump['highpass'] = raw.info['highpass']
