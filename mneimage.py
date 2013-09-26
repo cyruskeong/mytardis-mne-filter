@@ -20,7 +20,6 @@ from mne.fiff import Raw
 from mne.datasets import sample
 from mne import fiff
 
-
 logger = logging.getLogger(__name__)
 
 """
@@ -78,6 +77,7 @@ class MNEImageFilter(object):
             #handle MNE files
             #get raw data
             raw = Raw(raw_fname)
+	    
 
             metadata_dump = dict()
 
@@ -111,9 +111,48 @@ class MNEImageFilter(object):
 
             # get file id logger.error('image_information ' + raw.info['file_id'])
             #metadata_dump['image_information'] = 'Some fixed value'
-	        metadata_dump['number_of_channels'] = raw.n_times
-	 
-	        metadata_dump['image_information'] = "".join(raw.ch_names)
+	    #metadata_dump['image_information'] = raw.info['comps']
+	    logger.error('step 1.2.1')
+            metadata_dump['experimenter'] = raw.info['experimenter']
+            logger.error(metadata_dump['experimenter'])
+	    logger.error('step 1.2.2')
+            metadata_dump['description'] = raw.info['description']
+            logger.error(metadata_dump['description'])
+            #logger.error('step 1.2.3')
+            #metadata_dump['proj_id'] = raw.info['proj_id']
+	    #logger.error(metadata_dump['proj_id'])
+            logger.error('step 1.2.3')
+            metadata_dump['proj_name'] = raw.info['proj_name']
+	    logger.error(metadata_dump['proj_name'])
+	    #logger.error('step 1.2.5')
+            #metadata_dump['chs'] = raw.info['chs']
+	    #logger.error(metadata_dump['chs'])
+	    #logger.error('step 1.2.6')
+            #metadata_dump['secs'] = raw.info['meas_id']['secs']
+	    #logger.error('step 1.2.7')
+            #metadata_dump['usecs'] = raw.info['meas_id']['usecs']
+	    #logger.error('step 1.2.8')
+            #metadata_dump['comps'] = raw.info['comps']
+	    #logger.error(metadata_dump['comps'])
+	    #logger.error('step 1.2.9')
+            #metadata_dump['acq_pars'] = raw.info['acq_pars']
+	    #logger.error(metadata_dump['acq_pars'])
+	    logger.error('step 1.2.4')
+            metadata_dump['acq_stim'] = raw.info['acq_stim']
+	    logger.error(metadata_dump['acq_stim'])
+	    #logger.error('step 1.2.11')
+            #metadata_dump['dig'] = raw.info['dig']
+	    #logger.error(metadata_dump['dig'])
+	    logger.error('step 1.2.5')
+	    metadata_dump['number_of_channels'] = raw.info['nchan']
+	    logger.error(raw.info['nchan'])
+
+	    logger.error('step 1.2.6')
+	    metadata_dump['number_of_timepoints'] = raw.n_times
+	    logger.error(metadata_dump['number_of_timepoints'])	 
+
+	    logger.error('step 1.2.7')
+	    metadata_dump['channel_names'] = "".join(raw.ch_names)
 	   
             #STI
             numberOfSTI = 0
@@ -123,15 +162,15 @@ class MNEImageFilter(object):
 
             metadata_dump['numberOfSTI'] = numberOfSTI
 	
-	        #EOG
-	        numberOfEOG = 0
-	        for term2 in raw.ch_names:
-		     if term2.startswith('EOG'):
+	    #EOG
+	    numberOfEOG = 0
+	    for term2 in raw.ch_names:
+		if term2.startswith('EOG'):
 			numberOfEOG += 1
 
-	        metadata_dump['numberOfEOG'] = numberOfEOG
+	    metadata_dump['numberOfEOG'] = numberOfEOG
 
-	        #EEG
+	   #EEG
             numberOfEEG = 0
             for term3 in raw.ch_names:
                 if term3.startswith('EEG'):
@@ -139,8 +178,8 @@ class MNEImageFilter(object):
 
             metadata_dump['numberOfEEG'] = numberOfEEG
 
- 	        #MEG
-	        numberOfMEG = 0
+ 	    #MEG
+	    numberOfMEG = 0
             for term4 in raw.ch_names:
                 if term4.startswith('MEG'):
                         numberOfMEG += 1
@@ -157,13 +196,14 @@ class MNEImageFilter(object):
             #metadata_dump['raw_info'] = raw.metadata.keys()
 
             # get channel names (attribute added during export)
-            metadata_dump['channel_names'] = raw.ch_names
+	    #logger.error('step 1.2.10')
+            #metadata_dump['channel_names'] = raw.ch_names
             #logger.error(raw.ch_names)
-	        #metadata_dump['channel_names'] = raw_ts.ch_names[:3]
+	    #metadata_dump['channel_names'] = raw_ts.ch_names[:3]
 
             # get The width of the transition band of the highpass filter
             metadata_dump['highpass'] = raw.info['highpass']
-
+	
             # get The width of the transition band of the lowpass filter
             metadata_dump['lowpass'] = raw.info['lowpass']
 

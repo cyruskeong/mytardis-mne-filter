@@ -28,19 +28,248 @@
                 "http://tardis.edu.au/schemas/mne/1"
             ]
         }
-    },
+    }
+     ,
     {
         "pk": null,
         "model": "tardis_portal.parametername",
         "fields": {
-            "name": "image_information",
+            "name": "proj_name",
             "data_type": 2,
-            "is_searchable": true,
+            "is_searchable": false,
             "choices": "",
             "comparison_type": 8,
-            "full_name": "Image Attribute",
+            "full_name": "Project name",
             "units": "",
-            "order": 9999,
+            "order": 2,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+    ,
+    {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "proj_id",
+            "data_type": 2,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Project ID",
+            "units": "",
+            "order": 3,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+    ,
+    {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "experimenter",
+            "data_type": 2,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Experimenter",
+            "units": "",
+            "order": 4,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+    ,
+    {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "description",
+            "data_type": 2,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Description",
+            "units": "",
+            "order": 5,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+     ,
+    {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "measure_id",
+            "data_type": 2,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Measurement ID",
+            "units": "",
+            "order": 6,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+    {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "measure_date",
+            "data_type": 2,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Measurement Date",
+            "units": "",
+            "order": 7,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+      ,
+    {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "number_of_channels",
+            "data_type": 1,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Total number of Channels",
+            "units": "",
+            "order": 8,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+    ,
+   {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "numberOfEEG",
+            "data_type": 1,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Number of EEG",
+            "units": "",
+            "order": 9,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+   {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "numberOfMEG",
+            "data_type": 1,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Number of MEG",
+            "units": "",
+            "order": 10,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+    ,
+   {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "numberOfSTI",
+            "data_type": 1,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Number of STI",
+            "units": "",
+            "order": 11,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+   {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "numberOfEOG",
+            "data_type": 1,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Number of EOG",
+            "units": "",
+            "order": 12,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+    {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "highpass",
+            "data_type": 1,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "highpass",
+            "units": "",
+            "order": 13,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+   {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "lowpass",
+            "data_type": 1,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "lowpass",
+            "units": "",
+            "order": 14,
             "immutable": true,
             "schema": [
                 "http://tardis.edu.au/schemas/mne/1"
@@ -58,8 +287,8 @@
             "choices": "",
             "comparison_type": 8,
             "full_name": "Sampling Frequency",
-	    "units": "Hz",
-            "order": 9999,
+	        "units": "Hz",
+            "order": 15,
             "immutable": true,
             "schema": [
                 "http://tardis.edu.au/schemas/mne/1"
@@ -67,16 +296,73 @@
         }
    }
    ,
-   {
+    {
         "pk": null,
         "model": "tardis_portal.parametername",
         "fields": {
-            "name": "numberOfSTI",
+            "name": "number_of_timepoints",
+            "data_type": 1,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Number of timepoints",
+            "units": "",
+            "order": 16,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+    {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "channel_names",
             "data_type": 2,
             "is_searchable": false,
             "choices": "",
             "comparison_type": 8,
-            "full_name": "Number of STI",
+            "full_name": "Channel names",
+            "units": "",
+            "order": 17,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+   ,
+    {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "acq_stim",
+            "data_type": 2,
+            "is_searchable": false,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "acq stim",
+            "units": "",
+            "order": 18,
+            "immutable": true,
+            "schema": [
+                "http://tardis.edu.au/schemas/mne/1"
+            ]
+        }
+   }
+    ,
+    {
+        "pk": null,
+        "model": "tardis_portal.parametername",
+        "fields": {
+            "name": "image_information",
+            "data_type": 2,
+            "is_searchable": true,
+            "choices": "",
+            "comparison_type": 8,
+            "full_name": "Other Image Attribute",
             "units": "",
             "order": 9999,
             "immutable": true,
@@ -85,63 +371,8 @@
             ]
         }
    }
-   ,
-   {
-        "pk": null,
-        "model": "tardis_portal.parametername",
-        "fields": {
-            "name": "numberOfEOG",
-            "data_type": 2,
-            "is_searchable": false,
-            "choices": "",
-            "comparison_type": 8,
-            "full_name": "Number of EOG",
-            "units": "",
-            "order": 9999,
-            "immutable": true,
-            "schema": [
-                "http://tardis.edu.au/schemas/mne/1"
-            ]
-        }
-   }
-   ,
-   {
-        "pk": null,
-        "model": "tardis_portal.parametername",
-        "fields": {
-            "name": "numberOfEEG",
-            "data_type": 2,
-            "is_searchable": false,
-            "choices": "",
-            "comparison_type": 8,
-            "full_name": "Number of EEG",
-            "units": "",
-            "order": 9999,
-            "immutable": true,
-            "schema": [
-                "http://tardis.edu.au/schemas/mne/1"
-            ]
-        }
-   }
-   ,
-   {
-        "pk": null,
-        "model": "tardis_portal.parametername",
-        "fields": {
-            "name": "numberOfMEG",
-            "data_type": 2,
-            "is_searchable": false,
-            "choices": "",
-            "comparison_type": 8,
-            "full_name": "Number of MEG",
-            "units": "",
-            "order": 9999,
-            "immutable": true,
-            "schema": [
-                "http://tardis.edu.au/schemas/mne/1"
-            ]
-        }
-   }
+   
+  
    ,
 
 
@@ -182,101 +413,9 @@
             ]
         }
    }
-   ,
-    {
-        "pk": null,
-        "model": "tardis_portal.parametername",
-        "fields": {
-            "name": "measure_date",
-            "data_type": 2,
-            "is_searchable": false,
-            "choices": "",
-            "comparison_type": 8,
-            "full_name": "Measurement Date",
-            "units": "Hz",
-            "order": 9999,
-            "immutable": true,
-            "schema": [
-                "http://tardis.edu.au/schemas/mne/1"
-            ]
-        }
-   }
-   ,
-    {
-        "pk": null,
-        "model": "tardis_portal.parametername",
-        "fields": {
-            "name": "measure_id",
-            "data_type": 2,
-            "is_searchable": false,
-            "choices": "",
-            "comparison_type": 8,
-            "full_name": "Measurement ID",
-            "units": "Hz",
-            "order": 9999,
-            "immutable": true,
-            "schema": [
-                "http://tardis.edu.au/schemas/mne/1"
-            ]
-        }
-   }
-   ,
-    {
-        "pk": null,
-        "model": "tardis_portal.parametername",
-        "fields": {
-            "name": "channel_names",
-            "data_type": 2,
-            "is_searchable": false,
-            "choices": "",
-            "comparison_type": 8,
-            "full_name": "Channel names",
-            "units": "Hz",
-            "order": 9999,
-            "immutable": true,
-            "schema": [
-                "http://tardis.edu.au/schemas/mne/1"
-            ]
-        }
-   }
-   ,
-    {
-        "pk": null,
-        "model": "tardis_portal.parametername",
-        "fields": {
-            "name": "highpass",
-            "data_type": 1,
-            "is_searchable": false,
-            "choices": "",
-            "comparison_type": 8,
-            "full_name": "width of the transition band of highpass filter",
-            "units": "",
-            "order": 9999,
-            "immutable": true,
-            "schema": [
-                "http://tardis.edu.au/schemas/mne/1"
-            ]
-        }
-   }
-   ,
-   {
-        "pk": null,
-        "model": "tardis_portal.parametername",
-        "fields": {
-            "name": "lowpass",
-            "data_type": 1,
-            "is_searchable": false,
-            "choices": "",
-            "comparison_type": 8,
-            "full_name": "width of the transition band of lowpass filter",
-            "units": "",
-            "order": 9999,
-            "immutable": true,
-            "schema": [
-                "http://tardis.edu.au/schemas/mne/1"
-            ]
-        }
-   }
+ 
+   
+  
 
 
 
